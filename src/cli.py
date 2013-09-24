@@ -59,7 +59,7 @@ def convertSSH(remote):
 
         return
 
-    url_fragments = remote[1].lower().strip('.git').split('/')
+    url_fragments = remote[1].strip('.git').split('/')
     assert len(url_fragments) == 5, "Invalid Github url " + remote[1]
 
     url = "git@github.com:" + url_fragments[3] + '/' + url_fragments[4] + '.git'
@@ -81,7 +81,7 @@ def convertHTTPS(remote):
 
         return
 
-    url_fragments = remote[1].lower().strip('.git').split(':')
+    url_fragments = remote[1].strip('.git').split(':')
     assert len(url_fragments) == 2, "Invalid github url " + remote[1]
 
     url = "https://github.com/" + url_fragments[1]
