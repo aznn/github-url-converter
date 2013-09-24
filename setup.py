@@ -19,12 +19,11 @@ setup(
     keywords = "github convert url",
     url = "https://github.com/aeonaxan/github-url-converter",
     packages=["src",],
-    long_description=read('README.md'),
     classifiers=[
         "Intended Audience :: Developers",
         "Natural Language :: English",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 2.7"
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
     ],
