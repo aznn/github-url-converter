@@ -1,8 +1,8 @@
-###Github-url-converter
+##Github-url-converter
 Easily converts the remote URL in your repositories from HTTPS to SSH or vice-versa.
 Hopefully saves you a few seconds every once in a while :)
 
-###Usage
+##Usage
 ```
 $ git remote -v
 origin	https://github.com/aeonaxan/demo (fetch)
@@ -21,7 +21,7 @@ Successfully changed origin URL to [https://github.com/aeonaxan/demo]
 
 Note: Here convert is aliased to github-url-converter
 
-###Installation
+##Installation
 You can easily install with pip
 ```
 pip install github-url-converter
