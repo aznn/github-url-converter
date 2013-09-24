@@ -8,7 +8,15 @@ Author: Ahmed Azaan Hassan (azaan@outlook.com) 2013
 import sys
 import helpers
 
+
 def main():
+    """Main method for this module"""
+
+    if len(sys.argv) > 1 and sys.argv[1].lower() in ("help", "h"):
+        printHelp(sys.argv[0])
+        sys.exit(0)
+
+
     if len(sys.argv) != 3:
         printHelp(sys.argv[0])
         sys.exit(1)
@@ -57,7 +65,6 @@ def convertSSH(remote):
         print "Successfully changed {0} URL to [{1}]".format(remote[0], url)
     else:
         print "Unexpected error! could not change the URL"
-
 
 
 def convertHTTPS(remote):
