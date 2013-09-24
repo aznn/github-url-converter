@@ -12,10 +12,13 @@ import helpers
 def main():
     """Main method for this module"""
 
-    if len(sys.argv) > 1 and sys.argv[1].lower() in ("help", "h"):
-        printHelp()
-        sys.exit(0)
-
+    if len(sys.argv) == 2:
+        if sys.argv[1].lower() in ("help", "h"):
+            printHelp()
+            sys.exit(0)
+        elif sys.argv[1] == "install":
+            helpers.install_git_alias()
+            sys.exit(0)
 
     if len(sys.argv) != 3:
         printHelp()
@@ -92,10 +95,13 @@ def convertHTTPS(remote):
 def printHelp():
     """Prints the usage/help message for the script"""
     print "Usage:"
-    print "\t<remote_name> <https|ssh protocol to change into>"
+    print "\tgithub-url-converter <remote_name> <https|ssh protocol to change into>"
     print "\n\tPlease note, this will only work with valid Github URLs"
     print "\tGithub SSH  : git@github.com:username/project.git"
     print "\tGithub HTTPS: https://github.com/username/project"
+    print "\n\tTo install github-url-converter as an Alias execute this command"
+    print "\tgithub-url-converter install"
+    print "\tNow it is aliased globally to 'git convert'"
 
 
 if __name__ == '__main__':
