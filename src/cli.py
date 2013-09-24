@@ -13,12 +13,12 @@ def main():
     """Main method for this module"""
 
     if len(sys.argv) > 1 and sys.argv[1].lower() in ("help", "h"):
-        printHelp(sys.argv[0])
+        printHelp()
         sys.exit(0)
 
 
     if len(sys.argv) != 3:
-        printHelp(sys.argv[0])
+        printHelp()
         sys.exit(1)
 
     if not helpers.is_repository():
@@ -89,10 +89,10 @@ def convertHTTPS(remote):
         print "Unexpected error! could not change the URL"
 
 
-def printHelp(name):
+def printHelp():
     """Prints the usage/help message for the script"""
     print "Usage:"
-    print "\t{0} <remote_name> <https|ssh protocol to change into>".format(name)
+    print "\t<remote_name> <https|ssh protocol to change into>"
     print "\n\tPlease note, this will only work with valid Github URLs"
     print "\tGithub SSH  : git@github.com:username/project.git"
     print "\tGithub HTTPS: https://github.com/username/project"
