@@ -3,9 +3,10 @@ import subprocess
 def install_git_alias():
     """Installs the github-url-converter as an git alias for convert"""
     cmd = "git config --global --replace-all alias.convert !github-url-converter"
-    print cmd.split()
     with open('/dev/null', 'w') as f:
         subprocess.call(cmd.split(), stdout=f, stderr=f)
+
+    print "github-url-converter aliased to git convert"
 
 def is_repository():
     with open('/dev/null', 'w') as f:
